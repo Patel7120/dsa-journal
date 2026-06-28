@@ -47,14 +47,14 @@ Pick each number, pair it with every number after it, and check the sum.
 ```mermaid
 flowchart LR
     subgraph pairs["All pairs checked"]
-        A["2 + 7 ✓"]
-        B["2 + 11"]
-        C["2 + 15"]
-        D["7 + 11"]
-        E["7 + 15"]
-        F["11 + 15"]
+        A["2 plus 7 match"]
+        B["2 plus 11"]
+        C["2 plus 15"]
+        D["7 plus 11"]
+        E["7 plus 15"]
+        F["11 plus 15"]
     end
-    A --> R["Return [0, 1]"]
+    A --> R["Return 0 and 1"]
 ```
 
 ```
@@ -102,11 +102,11 @@ Store `{ value → index }` as you walk the array. For each number, compute its 
 
 ```mermaid
 flowchart TD
-    Start([Start]) --> Loop{For each<br/>index i, num}
-    Loop --> Calc["complement = target − num"]
-    Calc --> Check{complement<br/>in map?}
-    Check -->|Yes| Return["Return [map[complement], i]"]
-    Check -->|No| Store["map[num] = i"]
+    Start([Start]) --> Loop{"For each index i, num"}
+    Loop --> Calc["complement = target - num"]
+    Calc --> Check{"complement in map?"}
+    Check -->|Yes| Return["Return stored index and i"]
+    Check -->|No| Store["map num = i"]
     Store --> Loop
     Return --> Done([Done])
 ```
@@ -129,21 +129,21 @@ target = 9
 
 ```mermaid
 flowchart LR
-    subgraph step1["Step 1 — i=0, num=2"]
-        S1A["complement = 9−2 = 7"]
-        S1B["7 ∉ map"]
-        S1C["map = {2:0}"]
+    subgraph step1["Step 1: i=0, num=2"]
+        S1A["complement = 9-2 = 7"]
+        S1B["7 not in map"]
+        S1C["map stores 2 at 0"]
         S1A --> S1B --> S1C
     end
 
-    subgraph step2["Step 2 — i=1, num=7"]
-        S2A["complement = 9−7 = 2"]
-        S2B["2 ∈ map ✓"]
-        S2C["return [0, 1]"]
+    subgraph step2["Step 2: i=1, num=7"]
+        S2A["complement = 9-7 = 2"]
+        S2B["2 found in map"]
+        S2C["return 0 and 1"]
         S2A --> S2B --> S2C
     end
 
-    step1 --> step2
+    S1C --> S2A
 ```
 
 ### Step-by-step table
@@ -169,17 +169,17 @@ i=0  num=2                      i=1  num=7
 
 ```mermaid
 flowchart TB
-    subgraph BF["Brute Force O(n²)"]
+    subgraph BF["Brute Force O n squared"]
         direction TB
-        BF1["For each i"] --> BF2["Scan all j > i"]
-        BF2 --> BF3["Check nums[i] + nums[j]"]
+        BF1["For each i"] --> BF2["Scan all j greater than i"]
+        BF2 --> BF3["Check nums at i plus nums at j"]
     end
 
-    subgraph HM["Hash Map O(n)"]
+    subgraph HM["Hash Map O n"]
         direction TB
         HM1["For each num"] --> HM2["Compute complement"]
-        HM2 --> HM3["O(1) lookup in map"]
-        HM3 --> HM4["Store num → index"]
+        HM2 --> HM3["O 1 lookup in map"]
+        HM3 --> HM4["Store num to index"]
     end
 ```
 
