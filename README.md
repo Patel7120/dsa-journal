@@ -88,7 +88,7 @@ dsa-journal/
 │
 ├── sql/
 │   ├── basics/
-│   ├── joins/
+│   ├── joins/               ← Combine Two Tables, …
 │   ├── aggregation/
 │   ├── subqueries/
 │   ├── cte/
@@ -104,6 +104,10 @@ Each problem lives in its own folder:
 python/arrays/two_sum/
 ├── README.md      ← full write-up (intuition, dry run, diagrams)
 └── solution.py    ← clean implementation
+
+sql/joins/combine_two_tables/
+├── README.md      ← full write-up (intuition, dry run, diagrams)
+└── solution.sql   ← clean implementation
 ```
 
 ---
@@ -138,14 +142,16 @@ flowchart LR
 | Optimized approach  | The pattern-driven solution        |
 | Dry run             | Trace through a concrete example   |
 | Visual diagrams     | Flows, tables, ASCII snapshots     |
-| Solution            | Minimal, readable Python           |
+| Solution            | Minimal, readable Python or SQL    |
 | Complexity          | Time & space with reasoning        |
 | Pattern recognition | When to reuse this technique       |
 | Common mistakes     | What interviewers watch for        |
 | Related problems    | Where to practice the same pattern |
 
 
-**Example:** [Two Sum](python/arrays/two_sum/README.md) — hash map, one-pass lookup.
+**Examples:**
+- [Two Sum](python/arrays/two_sum/README.md) — hash map, one-pass lookup
+- [Combine Two Tables](sql/joins/combine_two_tables/README.md) — LEFT JOIN, preserve all left rows
 
 ---
 
@@ -155,59 +161,59 @@ Track progress as problems are added. `[x]` = documented with full write-up.
 
 ### Arrays
 
-- [Two Sum](python/arrays/two_sum/README.md)
-- Best Time to Buy and Sell Stock
-- Product of Array Except Self
-- Container With Most Water
-- 3Sum
+- [x] [Two Sum](python/arrays/two_sum/README.md)
+- [ ] Best Time to Buy and Sell Stock
+- [ ] Product of Array Except Self
+- [ ] Container With Most Water
+- [ ] 3Sum
 
 ### Hash maps / hash sets
 
-- Contains Duplicate
-- Valid Anagram
-- Group Anagrams
-- Top K Frequent Elements
-- Longest Consecutive Sequence
+- [ ] Contains Duplicate
+- [ ] Valid Anagram
+- [ ] Group Anagrams
+- [ ] Top K Frequent Elements
+- [ ] Longest Consecutive Sequence
 
 ### Two pointers
 
-- Valid Palindrome
-- Two Sum II
-- Move Zeroes
-- Merge Sorted Array
+- [ ] Valid Palindrome
+- [ ] Two Sum II
+- [ ] Move Zeroes
+- [ ] Merge Sorted Array
 
 ### Sliding window
 
-- Longest Substring Without Repeating Characters
-- Minimum Window Substring
-- Permutation in String
+- [ ] Longest Substring Without Repeating Characters
+- [ ] Minimum Window Substring
+- [ ] Permutation in String
 
 ### Stack
 
-- Valid Parentheses
-- Min Stack
-- Daily Temperatures
-- Evaluate Reverse Polish Notation
+- [ ] Valid Parentheses
+- [ ] Min Stack
+- [ ] Daily Temperatures
+- [ ] Evaluate Reverse Polish Notation
 
 ### Trees
 
-- Maximum Depth of Binary Tree
-- Same Tree
-- Invert Binary Tree
-- Binary Tree Level Order Traversal
+- [ ] Maximum Depth of Binary Tree
+- [ ] Same Tree
+- [ ] Invert Binary Tree
+- [ ] Binary Tree Level Order Traversal
 
 ### Graphs
 
-- Number of Islands
-- Clone Graph
-- Course Schedule
+- [ ] Number of Islands
+- [ ] Clone Graph
+- [ ] Course Schedule
 
 ### Dynamic programming
 
-- Climbing Stairs
-- House Robber
-- Coin Change
-- Longest Increasing Subsequence
+- [ ] Climbing Stairs
+- [ ] House Robber
+- [ ] Coin Change
+- [ ] Longest Increasing Subsequence
 
 ```mermaid
 flowchart TB
@@ -227,28 +233,33 @@ flowchart TB
 
 ## SQL roadmap
 
+Track progress as problems are added. `[x]` = documented with full write-up.
+
 ### Basics
 
-- SELECT
-- WHERE
-- ORDER BY
-- GROUP BY
-- HAVING
+- [ ] SELECT
+- [ ] WHERE
+- [ ] ORDER BY
+- [ ] GROUP BY
+- [ ] HAVING
+
+### Joins
+
+- [x] [Combine Two Tables](sql/joins/combine_two_tables/README.md)
 
 ### Intermediate
 
-- JOINs
-- Subqueries
-- CASE
-- UNION
-- CTE
+- [ ] Subqueries
+- [ ] CASE
+- [ ] UNION
+- [ ] CTE
 
 ### Advanced
 
-- Window functions
-- Recursive CTE
-- Ranking functions
-- Query optimization
+- [ ] Window functions
+- [ ] Recursive CTE
+- [ ] Ranking functions
+- [ ] Query optimization
 
 ```mermaid
 flowchart LR
@@ -266,27 +277,28 @@ flowchart LR
 ## Progress
 
 
-| Category            | Done | Planned |
-| ------------------- | ---- | ------- |
-| Python problems     | 1    | 40+     |
-| SQL exercises       | 0    | 20+     |
-| Patterns documented | 1    | 15+     |
+| Category            | Done | Goal |
+| ------------------- | ---- | ---- |
+| Python problems     | 1    | 150  |
+| SQL problems        | 1    | 50   |
+| Patterns documented | 2    | 15+  |
 
 
 ```
-Python  ▓░░░░░░░░░░░░░░░░░░░   1 / 40+
-SQL     ░░░░░░░░░░░░░░░░░░░░   0 / 20+
+Python  ░░░░░░░░░░░░░░░░░░░░   1 / 150
+SQL     ░░░░░░░░░░░░░░░░░░░░   1 / 50
 ```
 
 
-| Pattern             | Status | Example                                    |
-| ------------------- | ------ | ------------------------------------------ |
-| Hash map            | ✅      | [Two Sum](python/arrays/two_sum/README.md) |
-| Two pointers        | —      | —                                          |
-| Sliding window      | —      | —                                          |
-| Stack               | —      | —                                          |
-| BFS / DFS           | —      | —                                          |
-| Dynamic programming | —      | —                                          |
+| Pattern             | Status | Example                                                          |
+| ------------------- | ------ | ---------------------------------------------------------------- |
+| Hash map            | Done   | [Two Sum](python/arrays/two_sum/README.md)                       |
+| LEFT JOIN           | Done   | [Combine Two Tables](sql/joins/combine_two_tables/README.md)     |
+| Two pointers        | —      | —                                                                |
+| Sliding window      | —      | —                                                                |
+| Stack               | —      | —                                                                |
+| BFS / DFS           | —      | —                                                                |
+| Dynamic programming | —      | —                                                                |
 
 
 ---
