@@ -89,6 +89,7 @@ dsa-journal/
 ├── sql/
 │   ├── basics/
 │   ├── joins/               ← Combine Two Tables, …
+│   ├── filtering/           ← Find Customer Referee, …
 │   ├── aggregation/
 │   ├── subqueries/
 │   ├── cte/
@@ -106,6 +107,10 @@ python/arrays/two_sum/
 └── solution.py    ← clean implementation
 
 sql/joins/combine_two_tables/
+├── README.md      ← full write-up (intuition, dry run, diagrams)
+└── solution.sql   ← clean implementation
+
+sql/filtering/find_customer_referee/
 ├── README.md      ← full write-up (intuition, dry run, diagrams)
 └── solution.sql   ← clean implementation
 ```
@@ -152,6 +157,7 @@ flowchart LR
 **Examples:**
 - [Two Sum](python/arrays/two_sum/README.md) — hash map, one-pass lookup
 - [Combine Two Tables](sql/joins/combine_two_tables/README.md) — LEFT JOIN, preserve all left rows
+- [Find Customer Referee](sql/filtering/find_customer_referee/README.md) — NULL handling in WHERE
 
 ---
 
@@ -247,6 +253,10 @@ Track progress as problems are added. `[x]` = documented with full write-up.
 
 - [x] [Combine Two Tables](sql/joins/combine_two_tables/README.md)
 
+### Filtering
+
+- [x] [Find Customer Referee](sql/filtering/find_customer_referee/README.md)
+
 ### Intermediate
 
 - [ ] Subqueries
@@ -280,13 +290,13 @@ flowchart LR
 | Category            | Done | Goal |
 | ------------------- | ---- | ---- |
 | Python problems     | 1    | 150  |
-| SQL problems        | 1    | 50   |
-| Patterns documented | 2    | 15+  |
+| SQL problems        | 2    | 50   |
+| Patterns documented | 3    | 15+  |
 
 
 ```
 Python  ░░░░░░░░░░░░░░░░░░░░   1 / 150
-SQL     ░░░░░░░░░░░░░░░░░░░░   1 / 50
+SQL     ░░░░░░░░░░░░░░░░░░░░   2 / 50
 ```
 
 
@@ -294,6 +304,7 @@ SQL     ░░░░░░░░░░░░░░░░░░░░   1 / 50
 | ------------------- | ------ | ---------------------------------------------------------------- |
 | Hash map            | Done   | [Two Sum](python/arrays/two_sum/README.md)                       |
 | LEFT JOIN           | Done   | [Combine Two Tables](sql/joins/combine_two_tables/README.md)     |
+| NULL handling       | Done   | [Find Customer Referee](sql/filtering/find_customer_referee/README.md) |
 | Two pointers        | —      | —                                                                |
 | Sliding window      | —      | —                                                                |
 | Stack               | —      | —                                                                |
