@@ -75,6 +75,7 @@ dsa-journal/
 │
 ├── python/
 │   ├── arrays/              ← Two Sum, 3Sum, …
+│   ├── hashmap/             ← Contains Duplicate, …
 │   ├── strings/
 │   ├── linked-list/
 │   ├── stack/
@@ -103,6 +104,10 @@ Each problem lives in its own folder:
 
 ```
 python/arrays/two_sum/
+├── README.md      ← full write-up (intuition, dry run, diagrams)
+└── solution.py    ← clean implementation
+
+python/hashmap/contains_duplicate/
 ├── README.md      ← full write-up (intuition, dry run, diagrams)
 └── solution.py    ← clean implementation
 
@@ -156,6 +161,7 @@ flowchart LR
 
 **Examples:**
 - [Two Sum](python/arrays/two_sum/README.md) — hash map, one-pass lookup
+- [Contains Duplicate](python/hashmap/contains_duplicate/README.md) — hash set, duplicate detection
 - [Combine Two Tables](sql/joins/combine_two_tables/README.md) — LEFT JOIN, preserve all left rows
 - [Find Customer Referee](sql/filtering/find_customer_referee/README.md) — NULL handling in WHERE
 
@@ -175,7 +181,7 @@ Track progress as problems are added. `[x]` = documented with full write-up.
 
 ### Hash maps / hash sets
 
-- [ ] Contains Duplicate
+- [x] [Contains Duplicate](python/hashmap/contains_duplicate/README.md)
 - [ ] Valid Anagram
 - [ ] Group Anagrams
 - [ ] Top K Frequent Elements
@@ -289,13 +295,13 @@ flowchart LR
 
 | Category            | Done | Goal |
 | ------------------- | ---- | ---- |
-| Python problems     | 1    | 150  |
+| Python problems     | 2    | 150  |
 | SQL problems        | 2    | 50   |
-| Patterns documented | 3    | 15+  |
+| Patterns documented | 4    | 15+  |
 
 
 ```
-Python  ░░░░░░░░░░░░░░░░░░░░   1 / 150
+Python  ░░░░░░░░░░░░░░░░░░░░   2 / 150
 SQL     ░░░░░░░░░░░░░░░░░░░░   2 / 50
 ```
 
@@ -303,6 +309,7 @@ SQL     ░░░░░░░░░░░░░░░░░░░░   2 / 50
 | Pattern             | Status | Example                                                          |
 | ------------------- | ------ | ---------------------------------------------------------------- |
 | Hash map            | Done   | [Two Sum](python/arrays/two_sum/README.md)                       |
+| Hash set            | Done   | [Contains Duplicate](python/hashmap/contains_duplicate/README.md) |
 | LEFT JOIN           | Done   | [Combine Two Tables](sql/joins/combine_two_tables/README.md)     |
 | NULL handling       | Done   | [Find Customer Referee](sql/filtering/find_customer_referee/README.md) |
 | Two pointers        | —      | —                                                                |
